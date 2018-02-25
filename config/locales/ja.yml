@@ -228,7 +228,7 @@ ja:
       title: ユーザ情報を編集する
     show:
       title: "%{user}のページ"
-      favorite_pictures: お気に入りブログ
+      favorite_pictures: お気に入り一覧
     index:
       title: ユーザ一覧
     create:

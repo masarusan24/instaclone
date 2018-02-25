@@ -1,0 +1,23 @@
+h1.title
+  = image_tag @user.image.thumb
+  =t '.title', user: @user.name
+  = link_to t(:edit), edit_user_path(@user.name), class: "btn btn-link"
+.container
+  h2
+    =t '.favorite_pictures'
+  .row
+    - @favorite_pictures.each do |picture|
+      .col-xs-12.col-md-6.picture-panel
+        h2
+          = picture.title
+        p
+          = picture.content
+        p
+          =t :author
+          | :
+          = picture.user.name
+        p
+          =t :created_at
+          | :
+          = picture.created_at
+        = link_to t(:detail), picture_path(picture.id), class: "btn btn-default"

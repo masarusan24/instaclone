@@ -8,13 +8,17 @@ h1.title
     - else
       = link_to favorites_path(picture_id: @picture.id), method: :post do
         i.fa.fa-star.faa-flash.animated.fa-2x
-  h2
-    =t :author
-  p
-    = @picture.user.name
-  h2
-    =t :content
-  p
-    = @picture.content
-  p
-    = image_tag @picture.image
+  .row
+    .col-xs-12.col-md-12
+      .picture-panel
+        .prof-panel
+          = image_tag @picture.user.image.thumb
+          = @picture.user.name
+        p
+          = image_tag @picture.image
+          p
+            = @picture.content
+          p
+            =t :created_at
+            | :
+            = @picture.created_at

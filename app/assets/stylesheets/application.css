@@ -51,3 +51,28 @@
  .btn {
    margin: 10px 0;
  }
+
+ .picture-panel {
+   text-align: center;
+   border: solid #b2b5b5;
+   border-width: 1px;
+   margin: 10px 0;
+ }
+
+.prof-panel {
+  text-align: left;
+}
+
+.prof-panel img {
+    border-radius: 150px;
+    -moz-border-image: border-radius 150px;
+    -webkit-border-image: border-radius 150px;
+    padding: 10px;
+}
+
+.prof-title img {
+    border-radius: 150px;
+    -moz-border-image: border-radius 150px;
+    -webkit-border-image: border-radius 150px;
+    padding: 10px;
+}

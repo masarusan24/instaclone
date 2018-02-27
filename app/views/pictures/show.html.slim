@@ -1,21 +1,21 @@
 h1.title
   =t '.title'
 .container
-  - unless @picture.user == current_user
-    - if @favorite.present?
-      = link_to favorite_path(picture_id: @picture.id), method: :delete do
-        i.fa.fa-star.fa-2x
-    - else
-      = link_to favorites_path(picture_id: @picture.id), method: :post do
-        i.fa.fa-star.faa-flash.animated.fa-2x
   .row
     .col-xs-12.col-md-12
       .picture-panel
         .prof-panel
           = image_tag @picture.user.image.thumb
           = @picture.user.name
-        p
+        .image_panel
           = image_tag @picture.image
+        .content-panel
+          - if @favorite.present?
+            = link_to favorite_path(picture_id: @picture.id), method: :delete do
+              i.fa.fa-star.fa-2x
+          - else
+            = link_to favorites_path(picture_id: @picture.id), method: :post do
+              i.fa.fa-star.faa-flash.animated.fa-2x
           p
             = @picture.content
           p

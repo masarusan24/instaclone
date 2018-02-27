@@ -76,3 +76,16 @@
     -webkit-border-image: border-radius 150px;
     padding: 10px;
 }
+
+.image_panel {
+
+}
+
+.content-panel {
+  text-align: left;
+  padding: 10px;
+}
+
+.btn-panel {
+  width: 33%;
+}

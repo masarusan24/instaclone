@@ -8,19 +8,20 @@ h1.title
           .prof-panel
             = image_tag picture.user.image.thumb
             = picture.user.name
-          p
+          .image_panel
             = image_tag picture.image
+          .content-panel
             p
               = picture.content
             p
               =t :created_at
               | :
               = picture.created_at
-            .picture-link
-              = link_to t(:detail), picture_path(picture.id), class: "btn btn-default"
-              - if picture.user == current_user
-                = link_to t(:edit), edit_picture_path(picture.id), class: "btn btn-info"
-                = link_to t(:delete), picture_path(picture.id), method: :delete, data: { confirm: t(:confirm_detele) }, class: "btn btn-danger"
-              - else
-                = link_to t(:edit), '', class: "btn btn-info", disabled: "disabled"
-                = link_to t(:delete), '', class: "btn btn-danger", disabled: "disabled"
+              .picture-link
+                = link_to t(:detail), picture_path(picture.id), class: "btn btn-default btn-panel"
+                - if picture.user == current_user
+                  = link_to t(:edit), edit_picture_path(picture.id), class: "btn btn-default btn-panel"
+                  = link_to t(:delete), picture_path(picture.id), method: :delete, data: { confirm: t(:confirm_detele) }, class: "btn btn-default btn-panel"
+                - else
+                  = link_to t(:edit), '', class: "btn btn-default btn-panel", disabled: "disabled"
+                  = link_to t(:delete), '', class: "btn btn-default btn-panel", disabled: "disabled"

@@ -3,19 +3,17 @@ h1
 .post_link
   p
     =link_to t(:post_link), picture_url(@picture.id)
-.container
-  .row
-    .col-xs-12.col-md-12
-      .picture-panel
-        .prof-panel
-          = image_tag @picture.user.image.thumb
-          = @picture.user.name
-        .image_panel
-          = image_tag @picture.image
-        .content-panel
-          p
-            = @picture.content
-          p
-            =t :created_at
-            | :
-            = @picture.created_at
+.prof-panel
+  p
+    =t :author
+    | :
+    = @picture.user.name
+.content-panel
+  p
+    =t :content
+    | :
+    = @picture.content
+  p
+    =t :created_at
+    | :
+    = @picture.created_at

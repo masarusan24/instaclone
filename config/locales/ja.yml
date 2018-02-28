@@ -221,6 +221,8 @@ ja:
   new_post: 新規投稿
   please_login: ログインしてください
   confirm_detele: 削除しますか？
+  email_notification: 写真を投稿しました
+  post_link: 投稿内容はこちら
   users:
     new:
       title: 新規ユーザ登録

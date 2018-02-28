@@ -4,6 +4,8 @@ en:
   occurred: "%{count} error occurred"
   please_login: Please Login
   confirm_detele: delete it?
+  email_notification: Photo has been posted
+  post_link: link to post
   users:
     new:
       title: Sign up
